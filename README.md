@@ -20,9 +20,10 @@ $ cd simulation_case_study/backend
 $ python -m venv .br-venv
 $ source .br-venv/bin/activate (On Windows: `.venv\Scripts\activate`)
 $ pip install -r requirements.txt
+$ pip install fastapi
 ```
 
-### Usage:
+## Usage:
    - Navigate to the `backend/` directory: `cd simulation_case_study-root/backend`
    - Run the simulation application on the local server: `uvicorn main:app --reload`
    - On a new terminal, submit your POST request. Here's an example curl command with input parameters, you can change the parameters with the same JSON playload: 
@@ -31,7 +32,7 @@ $ pip install -r requirements.txt
    ```
    - You can check the detailed information about the available endpoints, request parameters, and response formats at http://127.0.0.1:8000/docs while the server is running.
 
-### Infrastructure and Deploy Application on ECS:
+## Infrastructure and Deploy Application on ECS:
 
    - Navigate to the `infrastructure/` directory.
    - Install Terraform and AWS CLI: `brew install terraform`  (On Windows: `choco install terraform`)
@@ -42,11 +43,11 @@ $ pip install -r requirements.txt
    terraform apply -var="aws_access_key=your-access-key" -var="aws_secret_key=your-secret-key"
    ```
 
-### Run unittests:
+## Run unittests:
 ```bash
 cd simulation_case_study/backend
 python -m unittest tests.test_simulation
 ```
 
-### Development Notes:
+### Notes:
 - The simulate_system function in dynamical_simulation.py contains the logic for simulating the dynamical system.

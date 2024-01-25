@@ -16,14 +16,14 @@ Before installing the simulation application, you need to have the following ins
 ### Installation: Clone the Repo:
 ```bash
 $ git clone https://github.com/Lin-Wen15/simulation_case_study.git
-$ cd blackrock-case-study-root/backend
+$ cd simulation_case_study/backend
 $ python -m venv .br-venv
 $ source .br-venv/bin/activate (On Windows: `.venv\Scripts\activate`)
 $ pip install -r requirements.txt
 ```
 
 ### Usage:
-   - Navigate to the `backend/` directory: `cd blackrock-case-study-root/backend`
+   - Navigate to the `backend/` directory: `cd simulation_case_study-root/backend`
    - Run the simulation application on the local server: `uvicorn main:app --reload`
    - On a new terminal, submit your POST request. Here's an example curl command with input parameters, you can change the parameters with the same JSON playload: 
    ```bash
@@ -44,10 +44,9 @@ $ pip install -r requirements.txt
 
 ### Run unittests:
 ```bash
-cd blackrock-case-study-root/backend
+cd simulation_case_study/backend
 python -m unittest tests.test_simulation
 ```
 
 ### Development Notes:
 - The simulate_system function in dynamical_simulation.py contains the logic for simulating the dynamical system.
-# simulation_case_study
